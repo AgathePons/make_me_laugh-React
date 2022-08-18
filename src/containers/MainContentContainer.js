@@ -1,11 +1,11 @@
 // == Import
 import React, { useState } from 'react';
 import classNames from 'classnames';
+import { Routes, Route } from 'react-router-dom';
 
 import requestJoke from '../requests/geekJokesApi';
 
-import Joke from '../components/Joke';
-import Button from '../components/Button';
+import JokeContainer from './JokeContainer';
 
 // == Component
 function MainContainer() {
@@ -34,30 +34,30 @@ function MainContainer() {
   };
 
   return (
-    <main
-      className={classNames('main')}
-    >
-      {joke && (
-        <Joke jokeText={joke} />
-      )}
-      <Button
-        className="joke"
-        text={joke ? 'Give me another joke' : 'Give me a joke'}
-        onButtonClick={getAJoke}
-      />
-      {(joke && (!badJokes.includes(joke) && !goodJokes.includes(joke))) && (
-        <>
-          <Button
-            className="lol"
-            text="loooool"
-            onButtonClick={setInGoodJokes}
-          /><Button
-            className="meh"
-            text="Meh......"
-            onButtonClick={setInBadJokes}
-          />
-        </>
-      )}
+    <main className={classNames('main')}>
+      <Routes>
+        <Route
+          path="/"
+          element={(
+            <JokeContainer
+              joke={joke}
+              goodJokes={goodJokes}
+              badJokes={badJokes}
+              getAJokeClick={getAJoke}
+              setInGoodJokesClick={setInGoodJokes}
+              setInBadJokesClick={setInBadJokes}
+            />
+          )}
+        />
+        <Route
+          path="/good-ones"
+          element={'test good'}
+        />
+        <Route
+          path="/bad-ones"
+          element={'test bad'}
+        />
+      </Routes>
     </main>
   );
 }

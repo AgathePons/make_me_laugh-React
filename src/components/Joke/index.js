@@ -8,7 +8,7 @@ import './styles.scss';
 function Joke({ jokeText, className, ...rest }) {
   return (
     <div
-      className={classNames('joke', className)}
+      className={classNames(className)}
       {...rest}
     >
       {jokeText}

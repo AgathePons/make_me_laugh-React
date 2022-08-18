@@ -6,8 +6,7 @@ const requestJoke = async () => {
     return await axios.get('https://geek-jokes.sameerkumar.website/api?format=json');
   }
   catch (err) {
-    console.error(err.response);
-    return false;
+    return err.response;
   }
 };
 export default requestJoke;
