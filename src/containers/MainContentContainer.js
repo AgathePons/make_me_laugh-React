@@ -10,11 +10,27 @@ import Button from '../components/Button';
 // == Component
 function MainContainer() {
   const [joke, setJoke] = useState(null);
+  const [goodJokes, setGoodJokes] = useState([]);
+  const [badJokes, setBadJokes] = useState([]);
 
   const getAJoke = async () => {
     const newJoke = await requestJoke();
     setJoke(newJoke.data.joke);
     return newJoke.data.joke;
+  };
+
+  const setInGoodJokes = () => {
+    setGoodJokes((current) => ([
+      ...current,
+      joke,
+    ]));
+  };
+
+  const setInBadJokes = () => {
+    setBadJokes((current) => ([
+      ...current,
+      joke,
+    ]));
   };
 
   return (
@@ -29,20 +45,19 @@ function MainContainer() {
         text={joke ? 'Give me another joke' : 'Give me a joke'}
         onButtonClick={getAJoke}
       />
-      {joke && (
+      {(joke && (!badJokes.includes(joke) && !goodJokes.includes(joke))) && (
         <>
           <Button
             className="lol"
             text="loooool"
-            onButtonClick={() => console.log('tut lol')}
+            onButtonClick={setInGoodJokes}
           /><Button
             className="meh"
             text="Meh......"
-            onButtonClick={() => console.log('tut meh')}
+            onButtonClick={setInBadJokes}
           />
         </>
       )}
-
     </main>
   );
 }
