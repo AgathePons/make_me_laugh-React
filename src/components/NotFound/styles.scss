@@ -1,0 +1,20 @@
+.notfound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Jokerman', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ff00ff;
+  filter: 
+    drop-shadow(2px 2px #200220)
+    drop-shadow(4px 4px #ffee00)
+    drop-shadow(4px 6px #e5ffbb)
+    drop-shadow(2px 8px #ffae00)
+    drop-shadow(-2px 6px #d6a400)
+    drop-shadow(-4px 4px #d1ff29)
+    drop-shadow(-2px 6px #92ff2c)
+    drop-shadow(-2px 6px #00ff9d);
+}

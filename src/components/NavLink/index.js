@@ -5,14 +5,14 @@ import classNames from 'classnames';
 import './styles.scss';
 
 // == Component
-function NavLink({
+function NavLinkItem({
   icon,
   altText,
   className,
   ...rest
 }) {
   return (
-    <a
+    <div
       className={classNames('nav__link', className)}
       {...rest}
     >
@@ -21,16 +21,16 @@ function NavLink({
         src={icon}
         alt={altText}
       />
-    </a>
+    </div>
   );
 }
 
-NavLink.propTypes = {
+NavLinkItem.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
 };
-NavLink.defaultProps = {
+NavLinkItem.defaultProps = {
   className: 'nav__link',
 };
-export default React.memo(NavLink);
+export default React.memo(NavLinkItem);

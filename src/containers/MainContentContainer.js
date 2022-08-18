@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import requestJoke from '../requests/geekJokesApi';
 
 import JokeContainer from './JokeContainer';
+import NotFound from '../components/NotFound';
 
 // == Component
 function MainContainer() {
@@ -56,6 +57,10 @@ function MainContainer() {
         <Route
           path="/bad-ones"
           element={'test bad'}
+        />
+        <Route
+          path="*"
+          element={<NotFound />}
         />
       </Routes>
     </main>
