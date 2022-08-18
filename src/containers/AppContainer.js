@@ -1,13 +1,14 @@
 // == Import
-import Title from '../components/Title';
-import Paragraph from '../components/Paragraph';
+import HeaderContainer from './HeaderContainer';
+import MainContentContainer from './MainContentContainer';
+
 
 // == Composant
 function App() {
   return (
     <div className="app">
-      <Title title="Titre Prop" />
-      <Paragraph text="Lorem blabla" />
+      <HeaderContainer />
+      <MainContentContainer />
     </div>
   );
 }
