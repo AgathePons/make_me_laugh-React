@@ -5,19 +5,28 @@ import classNames from 'classnames';
 import './styles.scss';
 
 // == Component
-function Button({ className, ...rest }) {
+function Button({
+  text,
+  onButtonClick,
+  className,
+  ...rest
+}) {
   return (
     <button
+      type="button"
       className={classNames('button', className)}
+      onClick={onButtonClick}
       {...rest}
     >
-      test
+      {text}
     </button>
   );
 }
 
 Button.propTypes = {
   className: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
 };
 Button.defaultProps = {
   className: 'button',

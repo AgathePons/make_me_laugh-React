@@ -22,13 +22,13 @@ function HeaderContainer() {
             />
           </li>
           <li>
-          <NavLink
+            <NavLink
               icon={lolIcon}
               altText="Good jokes"
             />
           </li>
           <li>
-          <NavLink
+            <NavLink
               icon={trashIcon}
               altText="Bad jokes"
             />
@@ -38,6 +38,5 @@ function HeaderContainer() {
     </header>
   );
 }
-
 
 export default React.memo(HeaderContainer);
