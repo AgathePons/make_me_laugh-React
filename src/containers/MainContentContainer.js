@@ -1,5 +1,5 @@
 // == Import
-import React, { useState } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import { Routes, Route } from 'react-router-dom';
 
@@ -85,4 +85,4 @@ function MainContainer() {
   );
 }
 
-export default React.memo(MainContainer);
+export default MainContainer;

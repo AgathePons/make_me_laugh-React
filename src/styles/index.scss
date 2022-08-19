@@ -26,5 +26,9 @@ body {
 }
 
 .main {
-
+  .jokes {
+    &__title {
+      font-size: 3rem;
+    }
+  }
 }

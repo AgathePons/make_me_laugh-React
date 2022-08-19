@@ -2,6 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import JokeItem from '../components/JokeItem';
+
 // == Component
 function JokeContainer({
   jokes,
@@ -17,6 +19,16 @@ function JokeContainer({
           title
         )}
       </h1>
+      {jokes.length > 0 && (
+        <div className="jokes__list">
+          {jokes.map((joke) => (
+            <JokeItem
+              key={joke.id}
+              jokeText={joke.joke}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
