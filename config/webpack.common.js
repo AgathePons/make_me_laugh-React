@@ -17,7 +17,7 @@ module.exports = {
   ],
   output: {
     path: paths.build,
-    publicPath: '/',
+    publicPath: '/agathe-pons/make-me-laugh/',
     filename: 'js/[name].[contenthash].js',
   },
   resolve: {
