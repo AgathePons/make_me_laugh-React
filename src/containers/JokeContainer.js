@@ -2,6 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { isJokeAlreadyMarked } from '../utils/utils';
+
 import Joke from '../components/Joke';
 import Button from '../components/Button';
 
@@ -24,20 +26,23 @@ function JokeContainer({
         text={joke ? 'Give me another joke' : 'Give me a joke'}
         onButtonClick={getAJokeClick}
       />
-      {joke && (!badJokes.includes(joke) && !goodJokes.includes(joke)) && (
-        <>
-          <Button
-            className="lol"
-            text="loooool"
-            onButtonClick={setInGoodJokesClick}
-          />
-          <Button
-            className="meh"
-            text="Meh......"
-            onButtonClick={setInBadJokesClick}
-          />
-        </>
-      )}
+      {joke
+        && !isJokeAlreadyMarked(joke, goodJokes)
+        && !isJokeAlreadyMarked(joke, badJokes)
+        && (
+          <>
+            <Button
+              className="lol"
+              text="loooool"
+              onButtonClick={setInGoodJokesClick}
+            />
+            <Button
+              className="meh"
+              text="Meh......"
+              onButtonClick={setInBadJokesClick}
+            />
+          </>
+        )}
     </>
   );
 }

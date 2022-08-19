@@ -4,8 +4,10 @@ import classNames from 'classnames';
 import { Routes, Route } from 'react-router-dom';
 
 import requestJoke from '../requests/geekJokesApi';
+import { getNewId } from '../utils/utils';
 
 import JokeContainer from './JokeContainer';
+import JokesArrayContainer from './JokesArrayContainer';
 import NotFound from '../components/NotFound';
 
 // == Component
@@ -23,14 +25,20 @@ function MainContainer() {
   const setInGoodJokes = () => {
     setGoodJokes((current) => ([
       ...current,
-      joke,
+      {
+        id: getNewId(goodJokes),
+        joke: joke,
+      },
     ]));
   };
 
   const setInBadJokes = () => {
     setBadJokes((current) => ([
       ...current,
-      joke,
+      {
+        id: getNewId(badJokes),
+        joke: joke,
+      },
     ]));
   };
 
@@ -52,11 +60,21 @@ function MainContainer() {
         />
         <Route
           path="/good-ones"
-          element={'test good'}
+          element={(
+            <JokesArrayContainer
+              title="The best jokes ever!!!!😂😆😜😂"
+              jokes={goodJokes}
+            />
+          )}
         />
         <Route
           path="/bad-ones"
-          element={'test bad'}
+          element={(
+            <JokesArrayContainer
+              title="The jokes that really suck!!!!😒😞😖"
+              jokes={badJokes}
+            />
+          )}
         />
         <Route
           path="*"
