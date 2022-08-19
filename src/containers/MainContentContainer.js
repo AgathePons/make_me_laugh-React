@@ -46,7 +46,7 @@ function MainContainer() {
     <main className={classNames('main')}>
       <Routes>
         <Route
-          path="/"
+          path="/agathe-pons/make-me-laugh/"
           element={(
             <JokeContainer
               joke={joke}
@@ -59,7 +59,7 @@ function MainContainer() {
           )}
         />
         <Route
-          path="/good-ones"
+          path="/agathe-pons/make-me-laugh/good-ones"
           element={(
             <JokesArrayContainer
               title="The best jokes ever!!!!😂😆😜😂"
@@ -68,7 +68,7 @@ function MainContainer() {
           )}
         />
         <Route
-          path="/bad-ones"
+          path="/agathe-pons/make-me-laugh/bad-ones"
           element={(
             <JokesArrayContainer
               title="The jokes that really suck!!!!😒😞😖"
