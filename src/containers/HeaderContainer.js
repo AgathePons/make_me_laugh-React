@@ -7,6 +7,7 @@ import NavLinkItem from '../components/NavLink';
 import homeIcon from '../assets/icon/house-solid.svg';
 import lolIcon from '../assets/icon/face-grin-tears-solid.svg';
 import trashIcon from '../assets/icon/trash-can-solid.svg';
+import githubIcon from '../assets/icon/github-brands.svg';
 
 // == Component
 function HeaderContainer() {
@@ -39,6 +40,19 @@ function HeaderContainer() {
                 altText="Bad jokes"
               />
             </NavLink>
+          </li>
+          <li className={classNames('header__nav__list__item')}>
+            <a
+              href="https://github.com/AgathePons/make_me_laugh-React"
+              target="_blank"
+              rel="noreferrer"
+              className={classNames('header__nav__list__item__link')}
+            >
+              <NavLinkItem
+                icon={githubIcon}
+                altText="GitHub icon"
+              />
+            </a>
           </li>
         </ul>
       </nav>

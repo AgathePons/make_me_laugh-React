@@ -1,0 +1,27 @@
+.jokeitem {
+  padding: 2rem;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 1.2rem;
+}
+
+.separator {
+  animation: 1s linear 0s infinite backAnim;
+  background-color: blueviolet;
+  opacity: 0.8;
+  background-image:  linear-gradient(135deg, #d8b0dd 25%, transparent 25%), linear-gradient(225deg, #f744df 25%, transparent 25%), linear-gradient(45deg, #5044f7 25%, transparent 25%), linear-gradient(315deg, #6544f7 25%, #fffb00 25%);
+  background-position:  10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  
+  padding: 1rem;
+}
+
+@keyframes backAnim {
+  from {
+    background-position:  59px 0;
+  }
+  
+  to {
+    background-position:  0 59px;
+  }
+}

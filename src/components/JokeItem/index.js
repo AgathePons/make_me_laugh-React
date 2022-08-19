@@ -7,12 +7,15 @@ import './styles.scss';
 // == Component
 function JokeItem({ jokeText, className, ...rest }) {
   return (
-    <article
-      className={classNames(className)}
-      {...rest}
-    >
-      {jokeText}
-    </article>
+    <>
+      <article
+        className={classNames(className)}
+        {...rest}
+      >
+        {jokeText}
+      </article>
+      <div className={classNames('separator')} />
+    </>
   );
 }
 

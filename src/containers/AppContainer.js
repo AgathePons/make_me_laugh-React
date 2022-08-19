@@ -2,7 +2,6 @@
 import HeaderContainer from './HeaderContainer';
 import MainContentContainer from './MainContentContainer';
 
-
 // == Composant
 function App() {
   return (
