@@ -18,7 +18,13 @@ function HeaderContainer() {
       <nav className={classNames('header__nav')}>
         <ul className={classNames('header__nav__list')}>
           <li className={classNames('header__nav__list__item')}>
-            <NavLink to="/" className={classNames('header__nav__list__item__link')}>
+            <NavLink
+              to="/"
+              className={classNames(
+                'header__nav__list__item__link',
+                ({ isActive }) => (isActive ? 'active' : ''),
+              )}
+            >
               <NavLinkItem
                 icon={homeIcon}
                 altText="Homepage - Get a joke"
@@ -26,7 +32,13 @@ function HeaderContainer() {
             </NavLink>
           </li>
           <li className={classNames('header__nav__list__item')}>
-            <NavLink to="/good-ones" className={classNames('header__nav__list__item__link')}>
+            <NavLink
+              to="/good-ones"
+              className={classNames(
+                'header__nav__list__item__link',
+                ({ isActive }) => (isActive ? 'active' : ''),
+              )}
+            >
               <NavLinkItem
                 icon={lolIcon}
                 altText="Good jokes"
@@ -34,7 +46,13 @@ function HeaderContainer() {
             </NavLink>
           </li>
           <li className={classNames('header__nav__list__item')}>
-            <NavLink to="/bad-ones" className={classNames('header__nav__list__item__link')}>
+            <NavLink
+              to="/bad-ones"
+              className={classNames(
+                'header__nav__list__item__link',
+                ({ isActive }) => (isActive ? 'active' : ''),
+              )}
+            >
               <NavLinkItem
                 icon={trashIcon}
                 altText="Bad jokes"

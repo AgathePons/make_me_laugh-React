@@ -13,7 +13,7 @@ function NavLinkItem({
 }) {
   return (
     <div
-      className={classNames('nav__link', className)}
+      className={classNames(className)}
       {...rest}
     >
       <img
