@@ -13,11 +13,8 @@ import NotFound from '../components/NotFound';
 // == Component
 function MainContainer() {
   const [joke, setJoke] = useState(null);
-  // const [goodJokes, setGoodJokes] = useState([]);
-  const [badJokes, setBadJokes] = useState([]);
-
-  // TODO remove after css done
   const [goodJokes, setGoodJokes] = useState([]);
+  const [badJokes, setBadJokes] = useState([]);
 
   const getAJoke = async () => {
     const newJoke = await requestJoke();

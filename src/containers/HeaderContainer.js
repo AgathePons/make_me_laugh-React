@@ -19,7 +19,7 @@ function HeaderContainer() {
         <ul className={classNames('header__nav__list')}>
           <li className={classNames('header__nav__list__item')}>
             <NavLink
-              to="/"
+              to="/home"
               className={classNames(
                 'header__nav__list__item__link',
                 ({ isActive }) => (isActive ? 'active' : ''),
