@@ -26,23 +26,25 @@ function JokeContainer({
         text={joke ? 'Give me another joke' : 'Give me a joke'}
         onButtonClick={getAJokeClick}
       />
-      {joke
-        && !isJokeAlreadyMarked(joke, goodJokes)
-        && !isJokeAlreadyMarked(joke, badJokes)
-        && (
-          <>
-            <Button
-              className="lol"
-              text="loooool"
-              onButtonClick={setInGoodJokesClick}
-            />
-            <Button
-              className="meh"
-              text="Meh......"
-              onButtonClick={setInBadJokesClick}
-            />
-          </>
-        )}
+      <div className="rating-bloc">
+        {joke
+          && !isJokeAlreadyMarked(joke, goodJokes)
+          && !isJokeAlreadyMarked(joke, badJokes)
+          && (
+            <>
+              <Button
+                className="lol"
+                text="loooool"
+                onButtonClick={setInGoodJokesClick}
+              />
+              <Button
+                className="meh"
+                text="Meh......"
+                onButtonClick={setInBadJokesClick}
+              />
+            </>
+          )}
+      </div>
     </>
   );
 }
