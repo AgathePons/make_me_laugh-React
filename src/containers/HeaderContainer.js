@@ -19,7 +19,7 @@ function HeaderContainer() {
         <ul className={classNames('header__nav__list')}>
           <li className={classNames('header__nav__list__item')}>
             <NavLink
-              to="/"
+              to="/agathe-pons/make-me-laugh/"
               className={classNames(
                 'header__nav__list__item__link',
                 ({ isActive }) => (isActive ? 'active' : ''),
@@ -33,7 +33,7 @@ function HeaderContainer() {
           </li>
           <li className={classNames('header__nav__list__item')}>
             <NavLink
-              to="/good-ones"
+              to="/agathe-pons/make-me-laugh/good-ones"
               className={classNames(
                 'header__nav__list__item__link',
                 ({ isActive }) => (isActive ? 'active' : ''),
@@ -47,7 +47,7 @@ function HeaderContainer() {
           </li>
           <li className={classNames('header__nav__list__item')}>
             <NavLink
-              to="/bad-ones"
+              to="/agathe-pons/make-me-laugh/bad-ones"
               className={classNames(
                 'header__nav__list__item__link',
                 ({ isActive }) => (isActive ? 'active' : ''),
