@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'vars';
+@use 'shakerAnim';
 
 body {
   font-family: sans-serif;
@@ -78,10 +79,14 @@ body {
   background-image: linear-gradient(90deg, #ff00ff, #ff7300);
   box-shadow: #2c022c 0 10px 20px;
   color: #e5ffbb;
-  text-decoration: 1px dashed green;
+  transition: all .3s cubic-bezier(0.17, 0.84, 0.44, 1);
   &.give-joke {
     display: block;
-    margin: 0 1rem 2rem;
+    margin: 2rem 1rem 2rem;
+  }
+  &:hover {
+    box-shadow: #2c022c 0 10px 30px;
+    animation: 1s linear 0s infinite shake;
   }
 }
 
